@@ -1,7 +1,0 @@
-{
-    "projectId": "pkt3j4",
-    "env": {
-    "BASE_URL_STAGING": "https://web.passpod.project.skyshi.io/",
-    "BASE_URL_LIVE": "https://passpod.com/"
- }
-}
