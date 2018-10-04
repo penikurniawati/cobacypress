@@ -23,16 +23,16 @@ variables:
   #npm_config_cache: /builds/passpod/qa-test/.npm
   CYPRESS_CACHE_FOLDER: /cache/Cypress
 
-install:
+#install:
   #image: cypress/browsers:chrome67
   #image: bahmutov/cypress-image
-  stage: install
-  tags:
-    - docker
+  #stage: install
+  #tags:
+  # - docker
 
-  script:
-    - npm install --save-dev cypress
-    - $(npm bin)/cypress verify
+  #script:
+  #  - npm install --save-dev cypress
+  #  - $(npm bin)/cypress verify
 
 
 # we will generate the test definitions per spec bundle
@@ -52,8 +52,9 @@ install:
       - cypress/screenshots/
       - cypress/videos/
   script:
-    - pwd && ls -al
-    - ls -al /builds/passpod/qa-test/node_modules
+    #- pwd && ls -al
+    #- ls -al /builds/passpod/qa-test/node_modules
+    - npm install --save-dev cypress
     #- DEBUG=cypress:* $(npm bin)/cypress run --spec cypress/integration/$CI_BUILD_NAME.js --config video=false
     - $(npm bin)/cypress run --spec cypress/integration/$CI_BUILD_NAME.js
 
