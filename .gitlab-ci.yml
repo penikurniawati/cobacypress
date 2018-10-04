@@ -12,7 +12,7 @@ stages:
 cache:
   key: ${CI_COMMIT_REF_NAME}
   paths:  
-  #- node_modules
+  - node_modules
   #- .npm
   #- cache/Cypress
   #- .cache/Cypress
@@ -20,8 +20,8 @@ cache:
   - /builds/passpod/qa-test/node_modules
 
 variables:
-  npm_config_cache: /builds/passpod/qa-test/.npm
-  CYPRESS_CACHE_FOLDER: /builds/passpod/qa-test/cache/Cypress
+  #npm_config_cache: /builds/passpod/qa-test/.npm
+  #CYPRESS_CACHE_FOLDER: /builds/passpod/qa-test/cache/Cypress
 
 install:
   #image: cypress/browsers:chrome67
