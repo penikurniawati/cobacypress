@@ -31,6 +31,8 @@ install:
     - docker
 
   script:
+    - pwd && ls -al node_modules
+    - ls -al /builds/passpod/qa-test/node_modules
     - npm install --save-dev cypress
     - $(npm bin)/cypress verify
 
