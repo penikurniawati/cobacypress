@@ -17,7 +17,7 @@ cache:
   #- cache/Cypress
   #- .cache/Cypress
   - /root/.cache/Cypress
-  - /builds/passpod/qa-test/node_modules
+  #- /builds/passpod/qa-test/node_modules
 
 variables:
   #npm_config_cache: /builds/passpod/qa-test/.npm
@@ -52,7 +52,7 @@ install:
       - cypress/screenshots/
       - cypress/videos/
   script:
-    - pwd && ls -al node_modules
+    - pwd && ls -al
     - ls -al /builds/passpod/qa-test/node_modules
     #- DEBUG=cypress:* $(npm bin)/cypress run --spec cypress/integration/$CI_BUILD_NAME.js --config video=false
     - $(npm bin)/cypress run --spec cypress/integration/$CI_BUILD_NAME.js
