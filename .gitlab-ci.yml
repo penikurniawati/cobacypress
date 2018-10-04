@@ -10,7 +10,7 @@ stages:
 # caching node_modules folder
 # https://about.gitlab.com/2016/03/01/gitlab-runner-with-docker/
 cache:
-  key: ${CI_COMMIT_REF_NAME}
+  key: ${CI_COMMIT_REF_SLUG}
   paths:  
   - node_modules
   #- .npm
