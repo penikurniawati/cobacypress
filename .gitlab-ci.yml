@@ -21,7 +21,7 @@ cache:
 
 variables:
   #npm_config_cache: /builds/passpod/qa-test/.npm
-  #CYPRESS_CACHE_FOLDER: /builds/passpod/qa-test/cache/Cypress
+  CYPRESS_CACHE_FOLDER: /cache/Cypress
 
 install:
   #image: cypress/browsers:chrome67
