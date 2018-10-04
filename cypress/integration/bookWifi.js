@@ -28,6 +28,22 @@ describe('Wifi', function() {
        cy.get('#self').click()
        cy.get('#selfTwo').click()
        cy.get(':nth-child(3) > .payment-wrap > .btn').click()
+       cy.get('.box-btn-wrap > .btn-orange').click()
+
+       cy.wait(1500)
+        //User direct to login page because user not login
+        cy.get('form').within(() =>{
+            cy.get('input[type=text]').type('testingqa2b@gmail.com')
+            
+            // {enter} causes the form to submit
+            cy.get('.form-pwd > .form-control').type(`${'testing@12345'}`)
+            
+        })
+        cy.get('form > .btn-orange').click()
+
+        cy.get(':nth-child(5) > .input-group > .form-control').type('8765432190')
+        cy.wait(1500)
+        cy.get('.panel-btn-payment > .btn').click()
        
        //cy.get('.react-datepicker__day--keyboard-selected + div + div').click()
        //cy.get('.react-datepicker__day--mon:contains("day-24")').click()
