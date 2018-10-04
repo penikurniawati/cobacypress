@@ -16,7 +16,7 @@ cache:
   #- .npm
   #- cache/Cypress
   #- .cache/Cypress
-  #- /root/.cache/Cypress
+  - /root/.cache/Cypress
   #- /builds/passpod/qa-test/node_modules
 
 variables:
