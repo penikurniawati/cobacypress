@@ -68,3 +68,123 @@ addAttractionAndWifiToCartLogin:
 
 addAttractionFromItineraryToCartLogin:
   <<: *e2e_test_definition
+
+addAttractionFromItineraryToCartLoginSt:
+  <<: *e2e_test_definition
+
+addAttractionInItinerary2Login:
+  <<: *e2e_test_definition
+
+addAttractionInItineraryLoginSt:
+  <<: *e2e_test_definition
+
+addAttractionRegionToCart:
+  <<: *e2e_test_definition
+
+addAttractionRegionToCartSt:
+  <<: *e2e_test_definition
+
+addAttractionToCart2Login:
+  <<: *e2e_test_definition
+
+addAttractionToCart2St:
+  <<: *e2e_test_definition
+
+addAttractionToCartLogin:
+  <<: *e2e_test_definition
+
+addAttractionToCartLoginSt:
+  <<: *e2e_test_definition
+
+addAttractionToItineraryLogin:
+  <<: *e2e_test_definition
+
+AddTwoAttractionLogin:
+  <<: *e2e_test_definition
+
+addWifiToCartLogin:
+  <<: *e2e_test_definition
+
+addWifiToCartLoginSt:
+  <<: *e2e_test_definition
+
+bookAttractionInvalidLogin:
+  <<: *e2e_test_definition
+
+bookAttractionLogin:
+  <<: *e2e_test_definition
+
+bookingAttractionLoginSt:
+  <<: *e2e_test_definition
+
+bookingWifi2Login:
+  <<: *e2e_test_definition
+  
+bookingWifiLogin:
+  <<: *e2e_test_definition
+
+bookinWifiLoginSt:
+  <<: *e2e_test_definition
+
+bookWifi:
+  <<: *e2e_test_definition
+
+bookWifiSt:
+  <<: *e2e_test_definition
+  
+cart:
+  <<: *e2e_test_definition
+
+cartSt:
+  <<: *e2e_test_definition
+
+chooseDestinationLogin:
+  <<: *e2e_test_definition
+
+createItinerary:
+  <<: *e2e_test_definition
+
+createItineraryLogin:
+  <<: *e2e_test_definition
+  
+createItineraryLoginSt:
+  <<: *e2e_test_definition
+  
+createItinerarySt:
+  <<: *e2e_test_definition
+
+deleteAttractionInCartLogin:
+  <<: *e2e_test_definition
+
+editAttractionInCartLogin:
+  <<: *e2e_test_definition
+
+editItineraryLogin:
+  <<: *e2e_test_definition
+  
+editProfile:
+  <<: *e2e_test_definition
+  
+editProfileSt:
+  <<: *e2e_test_definition
+
+loginInvalid:
+  <<: *e2e_test_definition
+  
+searchBarCountry:
+  <<: *e2e_test_definition
+
+searchBarCountrySt:
+  <<: *e2e_test_definition
+
+searchBarTopDest:
+  <<: *e2e_test_definition
+  
+searchDestination:
+  <<: *e2e_test_definition
+
+searchRegion:
+  <<: *e2e_test_definition
+
+topDestinationToCartSt:
+  <<: *e2e_test_definition  
