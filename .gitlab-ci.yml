@@ -14,10 +14,10 @@ cache:
   paths:  
   - node_modules
   #- .npm
-  - cache/Cypress
+  #- cache/Cypress
   #- .cache/Cypress
-  - /root/.cache/Cypress
-  - /builds/passpod/qa-test/node_modules
+  #- /root/.cache/Cypress
+  #- /builds/passpod/qa-test/node_modules
 
 variables:
   npm_config_cache: /builds/passpod/qa-test/.npm
