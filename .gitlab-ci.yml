@@ -12,12 +12,12 @@ stages:
 cache:
   key: ${CI_COMMIT_REF_NAME}
   paths:  
-  - node_modules
+  #- node_modules
   #- .npm
   #- cache/Cypress
   #- .cache/Cypress
   - /root/.cache/Cypress
-  #- /builds/passpod/qa-test/node_modules
+  - /builds/passpod/qa-test/node_modules
 
 variables:
   npm_config_cache: /builds/passpod/qa-test/.npm
