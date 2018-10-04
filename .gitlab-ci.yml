@@ -57,8 +57,14 @@ install:
     #- DEBUG=cypress:* $(npm bin)/cypress run --spec cypress/integration/$CI_BUILD_NAME.js --config video=false
     - $(npm bin)/cypress run --spec cypress/integration/$CI_BUILD_NAME.js
 
-Activity_passpod:
+activityToCart:
   <<: *e2e_test_definition
-    
-addAttractionAndWifiToCart:
+
+activityToCartSt:
+  <<: *e2e_test_definition
+
+addAttractionAndWifiToCartLogin:
+  <<: *e2e_test_definition
+
+addAttractionFromItineraryToCartLogin:
   <<: *e2e_test_definition
