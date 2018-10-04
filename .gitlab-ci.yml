@@ -16,11 +16,11 @@ cache:
   #- .npm
   - cache/Cypress
   #- .cache/Cypress
-  #- /root/.cache/Cypress
-  #- /builds/passpod/tests-web/node_modules
+  - /root/.cache/Cypress
+  - /builds/passpod/qa-test/node_modules
 
 variables:
-  #npm_config_cache: /.npm
+  npm_config_cache: /.npm
   CYPRESS_CACHE_FOLDER: /cache/Cypress
 
 install:
