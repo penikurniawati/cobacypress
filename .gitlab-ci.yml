@@ -31,8 +31,6 @@ install:
     - docker
 
   script:
-    - pwd && ls -al node_modules
-    - ls -al /builds/passpod/qa-test/node_modules
     - npm install --save-dev cypress
     - $(npm bin)/cypress verify
 
@@ -54,6 +52,8 @@ install:
       - cypress/screenshots/
       - cypress/videos/
   script:
+    - pwd && ls -al node_modules
+    - ls -al /builds/passpod/qa-test/node_modules
     #- DEBUG=cypress:* $(npm bin)/cypress run --spec cypress/integration/$CI_BUILD_NAME.js --config video=false
     - $(npm bin)/cypress run --spec cypress/integration/$CI_BUILD_NAME.js
 
