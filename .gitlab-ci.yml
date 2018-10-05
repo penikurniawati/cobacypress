@@ -66,7 +66,7 @@ activityToCart:
 activityToCartSt:
   <<: *e2e_test_definition
 
-addAttractionAndWifiToCartLogin:
+addAttractionAndWifiToCart:
   <<: *e2e_test_definition
 
 addAttractionFromItineraryToCartLogin:
@@ -81,13 +81,10 @@ addAttractionInItinerary2Login:
 addAttractionInItineraryLoginSt:
   <<: *e2e_test_definition
 
-addAttractionRegionToCart:
-  <<: *e2e_test_definition
-
 addAttractionRegionToCartSt:
   <<: *e2e_test_definition
 
-addAttractionToCart2Login:
+addAttractionToCart:
   <<: *e2e_test_definition
 
 addAttractionToCart2St:
@@ -120,22 +117,16 @@ bookAttractionLogin:
 bookingAttractionLoginSt:
   <<: *e2e_test_definition
 
-bookingWifi2Login:
+bookingWifi:
   <<: *e2e_test_definition
   
-bookingWifiLogin:
+bookingWifi2Login:
   <<: *e2e_test_definition
 
 bookinWifiLoginSt:
   <<: *e2e_test_definition
 
-bookWifi:
-  <<: *e2e_test_definition
-
 bookWifiSt:
-  <<: *e2e_test_definition
-  
-cart:
   <<: *e2e_test_definition
 
 cartSt:
@@ -148,12 +139,6 @@ createItinerary:
   <<: *e2e_test_definition
 
 createItineraryLogin:
-  <<: *e2e_test_definition
-  
-createItineraryLoginSt:
-  <<: *e2e_test_definition
-  
-createItinerarySt:
   <<: *e2e_test_definition
 
 deleteAttractionInCartLogin:
