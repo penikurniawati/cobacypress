@@ -56,7 +56,7 @@ describe('Booking Wifi Using Credit Card', function() {
     })
   })
 
-  describe('Wifi', function() {
+  describe('Book wifi before login using bank transfer', function() {
     it('contains "Masuk"', () => {
         // go to check the path
         cy.visit(Cypress.env('BASE_URL_LIVE'));
