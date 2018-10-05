@@ -45,7 +45,7 @@ variables:
   #image: cypress/browsers:chrome67
   #image: bahmutov/cypress-image
   tags:
-    - docker
+    - cypress
   artifacts:
     when: on_failure
     expire_in: 1 week
