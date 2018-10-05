@@ -1,6 +1,6 @@
 describe('Booking Attraction', function() {
     it('Visits Passpod', function() {
-      cy.visit(Cypress.env('BASE_URL_LIVE'));
+      cy.visit(Cypress.env('BASE_URL'));
 
       //masuk ke halaman login
       cy.get('.account-wrap > [href="/id/login"]').click() 

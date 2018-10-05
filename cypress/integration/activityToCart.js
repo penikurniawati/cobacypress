@@ -3,7 +3,7 @@ describe('Attraction', function() {
         cy.server();
         cy.route('**/cart/**/short?**').as("getCart")
         // go to check the path
-        cy.visit(Cypress.env('BASE_URL_LIVE'));
+        cy.visit(Cypress.env('BASE_URL'));
 
         cy.get(':nth-child(2) > :nth-child(1) > .member-link').click()
         cy.get('div.slick-slide div.dest-title:contains("E-voucher Waterbom Bali")').click()            

@@ -3,7 +3,7 @@ describe('Cart', function() {
         //cy.server();
         //cy.route('**/attractions/**/short?**').as("getAttraction")
         // go to check the path
-        cy.visit(Cypress.env('BASE_URL_STAGING'));
+        cy.visit(Cypress.env('BASE_URL'));
 
         cy.get('.cart-list > a > img').click()
         cy.get('.btn-wrap > div > .btn').click()

@@ -1,6 +1,6 @@
 describe('Create Itinerary (Staging)', function() {
     it('Visits Passpod', function() {
-      cy.visit(Cypress.env('BASE_URL_STAGING'));
+      cy.visit(Cypress.env('BASE_URL'));
 
       //masuk ke halaman login
       cy.get('.account-wrap > [href="/id/login"]').click()
@@ -38,7 +38,7 @@ describe('Create Itinerary (Staging)', function() {
         cy.server(); // enable response stubbing
         cy.route('**/trip-plan/**/short?**').as("getTrip-plan")
         // go to check the path
-        cy.visit(Cypress.env('BASE_URL_STAGING'));
+        cy.visit(Cypress.env('BASE_URL'));
 
         cy.get(':nth-child(3) > :nth-child(1) > .member-link').click()
         cy.wait(1500)

@@ -3,7 +3,7 @@ describe('Activity', function() {
         cy.server();
         cy.route('**/attractions/**/short?**').as("getAttraction")
         // go to check the path
-        cy.visit(Cypress.env('BASE_URL_STAGING'));
+        cy.visit(Cypress.env('BASE_URL'));
 
         cy.get(':nth-child(2) > :nth-child(1) > .member-link').click()
         cy.get('div.slick-slide div.dest-title:contains("Tiket Waterbom Bali")').click()

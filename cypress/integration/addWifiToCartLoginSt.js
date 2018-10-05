@@ -1,6 +1,6 @@
 describe('Add Wifi To Cart (Staging)', function() {
     it('Visits Passpod', function() {
-      cy.visit(Cypress.env('BASE_URL_STAGING'));
+      cy.visit(Cypress.env('BASE_URL'));
 
       //masuk ke halaman login
       cy.get('.account-wrap > [href="/id/login"]').click()

@@ -1,6 +1,6 @@
 describe('Search Bar By Top Destination', function() {
     it('Visits Passpod', function() {
-      cy.visit(Cypress.env('BASE_URL_LIVE'));
+      cy.visit(Cypress.env('BASE_URL'));
 
       //masuk ke halaman login
     //   cy.contains('Masuk').click({multiple: true}) 

@@ -1,7 +1,7 @@
 describe('Wifi Passpod', function() {
     it('contains "Masuk"', () => {
         // go to check the path
-        cy.visit(Cypress.env('BASE_URL_STAGING'));
+        cy.visit(Cypress.env('BASE_URL'));
         // seed a user in the DB that we can control from our tests
         // assuming it generates a random password for us
 

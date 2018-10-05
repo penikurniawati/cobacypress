@@ -3,7 +3,7 @@ describe('Attraction', function() {
         cy.server();
         cy.route('**/attractions/**/short?**').as("getAttraction")
         // go to check the path
-        cy.visit(Cypress.env('BASE_URL_STAGING'));
+        cy.visit(Cypress.env('BASE_URL'));
 
         cy.get(':nth-child(2) > :nth-child(1) > .member-link').click()
         cy.get('div.slick-slide div.dest-title:contains("E-voucher Waterbom Bali")').click()            
@@ -45,7 +45,7 @@ describe('Attraction', function() {
                 //cy.server();
                 //cy.route('**/attractions/**/short?**').as("getAttraction")
                 // go to check the path
-                cy.visit(Cypress.env('BASE_URL_STAGING'));
+                cy.visit(Cypress.env('BASE_URL'));
         
                 cy.get('.slick-current > :nth-child(1) > #topBox > a > :nth-child(1) > .destination-box > img').click()
                 cy.get('.col-lg-9 > .row > :nth-child(2)').click()

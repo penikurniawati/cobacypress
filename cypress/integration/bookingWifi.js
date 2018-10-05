@@ -59,7 +59,7 @@ describe('Booking Wifi Using Credit Card', function() {
   describe('Book wifi before login using bank transfer', function() {
     it('contains "Masuk"', () => {
         // go to check the path
-        cy.visit(Cypress.env('BASE_URL_LIVE'));
+        cy.visit(Cypress.env('BASE_URL'));
         // seed a user in the DB that we can control from our tests
         // assuming it generates a random password for us
 

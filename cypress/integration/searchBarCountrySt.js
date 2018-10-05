@@ -1,6 +1,6 @@
 describe('Search Bar In Country (Staging)', function() {
     it('Visits Passpod', function() {
-      cy.visit(Cypress.env('BASE_URL_STAGING'));
+      cy.visit(Cypress.env('BASE_URL'));
         
       //selesai login
       cy.get('.input-group > .form-control').click()

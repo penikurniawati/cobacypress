@@ -1,6 +1,6 @@
 describe('Add Attraction To Cart (2)', function() {
     it('Visits Passpod', function() {
-      cy.visit(Cypress.env('BASE_URL_LIVE'));
+      cy.visit(Cypress.env('BASE_URL'));
 
       //masuk ke halaman login
       cy.get('.account-wrap > [href="/id/login"]').click()
@@ -31,7 +31,7 @@ describe('Add Attraction To Cart (2)', function() {
         //cy.server();
         //cy.route('**/attractions/**/short?**').as("getAttraction")
         // go to check the path
-        cy.visit(Cypress.env('BASE_URL_LIVE'));
+        cy.visit(Cypress.env('BASE_URL'));
 
         cy.get('.slick-current > :nth-child(1) > #topBox > a > :nth-child(1) > .destination-box > img').click()
         cy.get('.col-lg-9 > .row > :nth-child(2)').click()
