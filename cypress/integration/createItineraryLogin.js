@@ -1,6 +1,6 @@
-describe('Create Itinerary', function() {
+describe('Create Itinerary (Staging)', function() {
     it('Visits Passpod', function() {
-      cy.visit(Cypress.env('BASE_URL_LIVE'));
+      cy.visit(Cypress.env('BASE_URL_STAGING'));
 
       //masuk ke halaman login
       cy.get('.account-wrap > [href="/id/login"]').click()
@@ -23,14 +23,12 @@ describe('Create Itinerary', function() {
       cy.get(':nth-child(1) > :nth-child(1) > .react-datepicker-wrapper > .react-datepicker__input-container > .form-control').click()
       cy.get('.react-datepicker__day--keyboard-selected').click()
       cy.get(':nth-child(2) > :nth-child(1) > .react-datepicker-wrapper > .react-datepicker__input-container > .form-control').click()
-      //cy.get('.react-datepicker__day--keyboard-selected + div + div').click()
       //for set and get today date
        var d = new Date();
-       d.setDate(d.getDate() + 6);
+       d.setDate(d.getDate() + 5);
        cy.get('.react-datepicker__day:contains('+d.getDate()+'):not(.react-datepicker__day--disabled):eq(0)').click()
-       //cy.get('.react-datepicker__day--outside-month:contains('+d.getDate()+'):not(.react-datepicker__day--disabled)').click()
        cy.get('.text-center > .btn').click()
-       //klik button
+
        cy.get(':nth-child(4) > .btn').click()
     })
   })
@@ -40,7 +38,7 @@ describe('Create Itinerary', function() {
         cy.server(); // enable response stubbing
         cy.route('**/trip-plan/**/short?**').as("getTrip-plan")
         // go to check the path
-        cy.visit(Cypress.env('BASE_URL_LIVE'));
+        cy.visit(Cypress.env('BASE_URL_STAGING'));
 
         cy.get(':nth-child(3) > :nth-child(1) > .member-link').click()
         cy.wait(1500)
@@ -60,7 +58,7 @@ describe('Create Itinerary', function() {
         cy.wait(1000)
         cy.get('.mdest-city-head:visible:eq(0)').click()
         cy.wait(1000)
-        cy.get('.mdest-city-link:visible:eq(1)').click()
+        cy.get('.mdest-city-link:visible:eq(0)').click()
         cy.get('.form-wrap > :nth-child(3) > .btn').click()
         //set Start Date
         cy.get(':nth-child(1) > :nth-child(1) > .react-datepicker-wrapper > .react-datepicker__input-container > .form-control').click()
@@ -73,8 +71,8 @@ describe('Create Itinerary', function() {
         //for set and get today date
         var d = new Date();
         d.setDate(d.getDate() + 9);
-        //cy.get('.react-datepicker__day--outside-month:contains('+d.getDate()+'):not(.react-datepicker__day--disabled)').click()
-        cy.get('.react-datepicker__day:contains('+d.getDate()+'):not(.react-datepicker__day--disabled)').click()
+        cy.get('.react-datepicker__day:contains('+d.getDate()+'):not(.react-datepicker__day--disabled):eq(0)').click()
+
         cy.get('.text-center > .btn').click()
         cy.get(':nth-child(4) > .btn').click()
         })
