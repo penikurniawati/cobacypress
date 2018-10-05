@@ -1,6 +1,7 @@
 #image: cypress/browsers:chrome69
 #image: cypress/base:8
-image: cypress/base:10
+#image: cypress/base:10
+image: kiwicom/cypress-cli
 
 stages:
   - install
@@ -12,11 +13,11 @@ stages:
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:  
-  - node_modules/
+  #- node_modules/
   #- .npm
   #- cache/Cypress
   #- .cache/Cypress
-  - /root/.cache/Cypress
+  #- /root/.cache/Cypress
   #- /builds/passpod/qa-test/node_modules
 
 variables:
@@ -54,9 +55,10 @@ variables:
   script:
     #- pwd && ls -al
     #- ls -al /builds/passpod/qa-test/node_modules
-    - npm install --save-dev cypress
+    #- npm install --save-dev cypress
     #- DEBUG=cypress:* $(npm bin)/cypress run --spec cypress/integration/$CI_BUILD_NAME.js --config video=false
-    - $(npm bin)/cypress run --spec cypress/integration/$CI_BUILD_NAME.js
+    #- $(npm bin)/cypress run --spec cypress/integration/$CI_BUILD_NAME.js
+    - cypress run --spec cypress/integration/$CI_BUILD_NAME.js
 
 activityToCart:
   <<: *e2e_test_definition
