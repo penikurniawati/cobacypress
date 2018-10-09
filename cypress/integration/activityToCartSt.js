@@ -3,7 +3,7 @@ describe('Activity', function() {
         cy.server();
         cy.route('**/attractions/**/short?**').as("getAttraction")
         // go to check the path
-        cy.visit(Cypress.env('BASE_URL_LIVE')).log('Open Homepage');
+        cy.visit(Cypress.env('BASE_URL')).log('Open Homepage');
 
         cy.get(':nth-child(2) > :nth-child(1) > .member-link').click().log('Click 1')
         cy.get('div.slick-slide div.dest-title:contains("Hong Kong Disneyland")').click().log('Click 2')
@@ -13,7 +13,7 @@ describe('Activity', function() {
         //for set and get today date
         var d = new Date();
         d.setDate(d.getDate() + 4);
-        cy.get('.react-datepicker__day--outside-month:contains('+d.getDate()+'):not(.react-datepicker__day--disabled)').click().log('Click 5')
+        cy.get('.react-datepicker__day:contains('+d.getDate()+'):not(.react-datepicker__day--disabled):eq(0)').click().log('Click 5')
 
         cy.get(':nth-child(1) > .package-box-top > .row > .col-lg-5 > .col-wrap > #btnSelect').click().log('Click 6')
         cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .form-control').click().log('Click 7')
@@ -30,6 +30,7 @@ describe('Activity', function() {
       })
       cy.get('form > .btn-orange').click()
       
+      cy.get(':nth-child(5) > .input-group > .form-control').type('085123111222')
       cy.get('.panel-btn-payment > .btn').click()
 
       //Details payment

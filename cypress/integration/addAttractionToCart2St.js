@@ -6,7 +6,8 @@ describe('Attraction', function() {
         cy.visit(Cypress.env('BASE_URL'));
 
         cy.get(':nth-child(2) > :nth-child(1) > .member-link').click()
-        cy.get('div.slick-slide div.dest-title:contains("E-voucher Waterbom Bali")').click()            
+        //cy.get('div.slick-slide div.dest-title:contains("E-voucher Waterbom Bali")').click()            
+        cy.get('div.slick-active div.dest-title:eq(1) > h1').click()
         //cy.wait('@getAttraction')
         cy.wait(500)              
         cy.get(':nth-child(1) > .package-box-top > .row > .col-lg-5 > .col-wrap > #btnSelect').click()          
