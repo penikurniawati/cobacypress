@@ -1,5 +1,6 @@
 describe('Activity', function() {
     it('contains "Masuk"', () => {
+        Cypress.config()// ==>{defaultCommandTiemout}
         cy.server();
         cy.route('**/attractions/**/short?**').as("getAttraction")
         // go to check the path
@@ -30,7 +31,7 @@ describe('Activity', function() {
       })
       cy.get('form > .btn-orange').click()
       
-      cy.get(':nth-child(5) > .input-group > .form-control').type('085123111222')
+      cy.get(':nth-child(5) > .input-group > .form-control').type('0851231112')
       cy.get('.panel-btn-payment > .btn').click()
 
       //Details payment
