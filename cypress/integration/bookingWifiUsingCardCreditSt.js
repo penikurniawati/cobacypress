@@ -1,5 +1,6 @@
 describe('Booking Wifi Using Credit Card (Staging)', function() {
     it('Visits Passpod', function() {
+        Cypress.config()// ==>{defaultCommandTiemout}
         cy.visit(Cypress.env('BASE_URL'));
 
       //masuk ke halaman login
