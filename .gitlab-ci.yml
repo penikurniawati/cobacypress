@@ -81,6 +81,9 @@ addAttractionInItinerary2Login:
 addAttractionInItineraryLoginSt:
   <<: *e2e_test_definition
 
+addAttractionToCartUsingBankTransferSt:
+  <<: *e2e_test_definition
+  
 addAttractionRegionToCartSt:
   <<: *e2e_test_definition
 
@@ -102,7 +105,7 @@ addAttractionToItineraryLogin:
 AddTwoAttractionLogin:
   <<: *e2e_test_definition
 
-addWifiToCartLogin:
+addWifiToCartUsingBankTransferSt:
   <<: *e2e_test_definition
 
 addWifiToCartLoginSt:
@@ -114,7 +117,7 @@ bookAttractionInvalidLogin:
 bookAttractionLogin:
   <<: *e2e_test_definition
 
-bookingAttractionLoginSt:
+bookingAttractionUsingCardCreditSt:
   <<: *e2e_test_definition
 
 bookingWifi:
@@ -126,7 +129,7 @@ bookingWifi2Login:
 bookinWifiLoginSt:
   <<: *e2e_test_definition
 
-bookWifiSt:
+bookWifiUsingCardCreditSt:
   <<: *e2e_test_definition
 
 cartSt:
