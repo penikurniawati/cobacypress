@@ -2,6 +2,7 @@ describe('All Destination', function() {
     it('Destination Page', () => {
         //cy.server();
         //cy.route('**/attractions/**/short?**').as("getAttraction")
+        Cypress.config()// ==>{defaultCommandTiemout}
         // go to check the path
         cy.visit(Cypress.env('BASE_URL'));
         

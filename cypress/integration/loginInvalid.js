@@ -1,5 +1,6 @@
 describe('Login Using Invalid Data', function() {
     it('Visits Passpod', function() {
+      Cypress.config()// ==>{defaultCommandTiemout}
       cy.visit(Cypress.env('BASE_URL'));
 
       //masuk ke halaman login

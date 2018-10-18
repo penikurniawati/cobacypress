@@ -1,5 +1,6 @@
 describe('Search Bar In Country (Staging)', function() {
     it('Visits Passpod', function() {
+      Cypress.config()// ==>{defaultCommandTiemout}
       cy.visit(Cypress.env('BASE_URL'));
         
       //selesai login
