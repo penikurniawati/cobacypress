@@ -138,10 +138,16 @@ cartSt:
 chooseDestinationLogin:
   <<: *e2e_test_definition
 
+createItineraryCartCheckoutSt:
+  <<: *e2e_test_definition
+
 createItinerary:
   <<: *e2e_test_definition
 
 createItineraryLogin:
+  <<: *e2e_test_definition
+
+createReviewSt:
   <<: *e2e_test_definition
 
 deleteAttractionInCartLogin:
