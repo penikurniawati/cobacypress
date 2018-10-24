@@ -28,13 +28,17 @@ describe('All Destination', function() {
         cy.wait(1500)
         //user must login first
         cy.get('form').within(() =>{
-            cy.get('.form > :nth-child(1) > div > .form-control').type('testingqa2b@gmail.com')
+            cy.get('input[type=text]').type('pietro.ryanditha@skyshi.io')
             
-            cy.get('.form-pwd > .form-control').type(`${'testing@12345'}`)  
+            cy.get('input[type=password]').type(`${'242210'}`)  
         })
         cy.get('form > .btn-orange').click()
+        cy.get(':nth-child(5) > .input-group > .form-control').type('8765432190')
+        cy.wait(1500)
         cy.get('.panel-btn-payment > .btn').click()
 
+        cy.get('#bank').click()
+        cy.get(':nth-child(3) > .ck-right-wrap > .panel-payment-white > .btn').click()
 
          //To turn off all uncaught exception handling
          Cypress.on('uncaught:exception', (err, runnable) => {

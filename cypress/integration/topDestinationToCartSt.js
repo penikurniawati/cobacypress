@@ -1,5 +1,5 @@
 describe('Activity', function() {
-    it('contains "Masuk"', () => {
+    it('Destination Page', () => {
         cy.server();
         cy.route('**/attractions/**/short?**').as("getAttraction")
         Cypress.config()// ==>{defaultCommandTiemout}
@@ -14,7 +14,7 @@ describe('Activity', function() {
         //for set and get today date
         var d = new Date();
         d.setDate(d.getDate() + 4);
-        cy.get('.react-datepicker__day--outside-month:contains('+d.getDate()+'):not(.react-datepicker__day--disabled)').click()
+        cy.get('.react-datepicker__day:contains('+d.getDate()+'):not(.react-datepicker__day--disabled)').click()
 
         cy.get(':nth-child(1) > .package-box-top > .row > .col-lg-5 > .col-wrap > #btnSelect').click()
         cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(2) > .form-group > .form-control').select("09:00:00")
@@ -24,14 +24,14 @@ describe('Activity', function() {
         cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .user-wrap > .btn-user > #btnOk').click()
 
         cy.get('.yellow').click()
-        cy.wait(1000)
-        cy.get('.btn-wrap > .btn:visible').click()
+        cy.wait(2000)
+        cy.get('.btn-wrap > .btn').click()
         
         cy.wait(1500)
         cy.get('form').within(() =>{
-          cy.get('input[type=text]').type('testingqa2b@gmail.com')
+          cy.get('input[type=text]').type('pietro.ryanditha@skyshi.io')
           
-          cy.get('.form-pwd > .form-control').type(`${'testing@12345'}`)  
+          cy.get('.form-pwd > .form-control').type(`${'242210'}`)  
       })
       cy.get('form > .btn-orange').click()
 
