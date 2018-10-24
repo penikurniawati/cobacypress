@@ -27,7 +27,8 @@ describe('Add Wifi To Cart Using Bank Transfer (Staging)', function() {
       cy.wait(1000)
 
       //mulai checkout 
-      cy.get('.box-btn-wrap > .btn-orange').click()
+      //cy.get('.box-btn-wrap > .btn-orange').click()
+      cy.get('.btn-wrap > .btn').click()
       //cy.get(':nth-child(5) > .input-group > .form-control').type("83869056900")
       cy.get(':nth-child(5) > .input-group > .form-control').type("83869056900")
       cy.get('.panel-btn-payment > .btn').click()
@@ -80,7 +81,8 @@ describe('Add Wifi To Cart Using Bank Transfer (Staging)', function() {
        
       cy.get(':nth-child(3) > .payment-wrap > .btn').click()
        cy.wait(1000)
-       cy.get('.box-btn-wrap > .btn-orange').click()
+       cy.get('.btn-wrap > .btn').click()
+    //    cy.get('.box-btn-wrap > .btn-orange').click()
 
        cy.wait(1000)
         //User direct to login page because user not login
