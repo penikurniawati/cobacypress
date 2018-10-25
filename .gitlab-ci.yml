@@ -120,7 +120,7 @@ bookAttractionLogin:
 bookingAttractionUsingCardCreditSt:
   <<: *e2e_test_definition
 
-bookingWifiFullCut:
+bookingWifiFullCutSt:
   <<: *e2e_test_definition
   
 bookingWifi2Login:

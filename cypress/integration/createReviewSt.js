@@ -19,8 +19,6 @@ describe('Create Review In Attraction (Staging)', function() {
       cy.get('form > :nth-child(2) > .form-control').type("Bagus")
       cy.get(':nth-child(3) > .form-control').type("Atraksi menyenangkan")
       cy.get(':nth-child(4) > .btn').click()
-
-
     })
   })
   //ini untuk mengatasi error handler
