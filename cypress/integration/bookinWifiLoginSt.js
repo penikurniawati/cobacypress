@@ -87,10 +87,9 @@ describe('Booking Wifi (Staging)', function() {
        cy.wait(1500)
         //User direct to login page because user not login
         cy.get('form').within(() =>{
-            cy.get('input[type=text]').type('testingqa2b@gmail.com')
+            cy.get('input[type=text]').type('pietro.ryanditha@skyshi.io')
             
-            // {enter} causes the form to submit
-            cy.get('.form-pwd > .form-control').type(`${'testing@12345'}`)
+            cy.get('.form-pwd > .form-control').type(`${'242210'}`)
             
         })
         cy.get('form > .btn-orange').click()

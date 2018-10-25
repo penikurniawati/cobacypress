@@ -20,8 +20,14 @@ describe('Add Attraction In Itinerary (Staging)', function() {
       cy.get('.top-float-box > .btn').click()
       //cy.get('.modal-body > :nth-child(2) > .form-control').select('2018-09-26')
       //cy.get('.modal-body > :nth-child(2) > .form-control:nth-child(2)').select()
-      cy.get('.mb-1 > .btn-orange').click()
+      cy.get('.mb-1 > .btn-orange:visible').click()
       //cy.get('.mb-1 > .btn-orange').click()
+      cy.get('.top-float-box > .btn:visible').click()
+      cy.get('.modal-body > :nth-child(2) > .form-control:visible').select('HARI 2, 25 Okt 2018')
+      cy.get('.modal-body > .input-group > :nth-child(1)').select('11:00')
+      cy.get('.modal-body > .input-group > :nth-child(2)').select('13:00')
+      cy.get('.mb-1 > .btn-orange').click()
+
     })
   })
   //ini untuk mengatasi error handler

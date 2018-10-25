@@ -15,6 +15,7 @@ describe('Add Attraction From Itinerary To Cart (Staging)', function() {
       //pilih salah satu nama jadwal
       cy.get(':nth-child(1) > .trip-desc > h3 > div > a').click()
       cy.get('.d-flex > :nth-child(2) > a').click()
+      cy.wait(1000)
       cy.get('.trip-info > .btn').click()
       cy.get('.orange-input').click()
       cy.get('.react-datepicker__day--keyboard-selected').click()

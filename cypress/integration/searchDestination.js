@@ -24,7 +24,7 @@ describe('Search Destination', function() {
         cy.get('#btnOk').click()
         cy.get('.btn-wrap > .orange:visible').click()
 
-        cy.wait(2000)
+        cy.wait(1000)
         //user must login first
         cy.get('form').within(() =>{
             cy.get('input[type=text]').type('pietro.ryanditha@skyshi.io')

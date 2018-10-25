@@ -1,4 +1,4 @@
-describe('Activity', function() {
+describe('Activity to cart before login', function() {
     it('contains "Masuk"', () => {
         Cypress.config()// ==>{defaultCommandTiemout}
         cy.server();
@@ -23,16 +23,19 @@ describe('Activity', function() {
 
         cy.get('.btn-wrap > .orange:visible').click().log('Click 10')
         
-        cy.wait(2000)
+        cy.wait(1500)
         cy.get('form').within(() =>{
-          cy.get('input[type=text]').type('testingqa2b@gmail.com')
+          cy.get('input[type=text]').type('pietro.ryanditha@skyshi.io')
           
-          cy.get('.form-pwd > .form-control').type(`${'testing@12345'}`)  
+          cy.get('.form-pwd > .form-control').type(`${'242210'}`)
+          
       })
       cy.get('form > .btn-orange').click()
       
-      cy.get(':nth-child(5) > .input-group > .form-control').type('0851231112')
+      cy.get(':nth-child(5) > .input-group > .form-control').type('8765432190')
       cy.get('.panel-btn-payment > .btn').click()
+
+      cy.wait(1000)
 
       //Details payment
       cy.get('.col-xl-4 > .input-group > .form-control').type('4141 4141 4141 4141')
