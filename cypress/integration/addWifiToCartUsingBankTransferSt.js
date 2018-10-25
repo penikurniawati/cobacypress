@@ -32,6 +32,7 @@ describe('Add Wifi To Cart Using Bank Transfer (Staging)', function() {
       //cy.get(':nth-child(5) > .input-group > .form-control').type("83869056900")
       cy.get(':nth-child(5) > .input-group > .form-control').type("83869056900")
       cy.get('.panel-btn-payment > .btn').click()
+      cy.wait(3000)
       cy.get('#bank').check() //radio button dengan id: bank
       cy.get(':nth-child(3) > .ck-right-wrap > .panel-payment-white > .btn').click()
     })

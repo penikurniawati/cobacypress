@@ -29,6 +29,7 @@ describe('Add Attraction To Cart Using Bank Transfer (Staging)', function() {
       cy.get('.btn-wrap > .btn:visible()').click()
       cy.get(':nth-child(5) > .input-group > .form-control').type("83643771553")
       cy.get('.panel-btn-payment > .btn').click()
+      cy.wait(1000)
       cy.get('#bank').check() //radio button dengan id: bank
       cy.get(':nth-child(3) > .ck-right-wrap > .panel-payment-white > .btn').click()
     })
@@ -72,7 +73,7 @@ describe('Add Attraction To Cart Using Bank Transfer (Staging)', function() {
             cy.get('input[type=password]').type(`${'242210'}`)  
         })
         cy.get('form > .btn-orange:visible').click()
-        cy.get(':nth-child(5) > .input-group > .form-control').type('8765432190')
+        cy.get(':nth-child(5) > .input-group > .form-control').type("8765432190")
         cy.get('.panel-btn-payment > .btn').click()
         cy.wait(1000)
         //Details payment

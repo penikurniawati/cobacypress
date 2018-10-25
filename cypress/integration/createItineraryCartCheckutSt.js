@@ -43,11 +43,17 @@ describe('Create Itinerary, Add to Cart, Checkout (Staging)', function() {
        cy.get('.trip-info > .btn').click()
        cy.get('.orange-input').click()
        cy.get('.react-datepicker__day--keyboard-selected').click()
-       
-
-
-
-
+       cy.get('#btnSelect').click()
+       cy.get('.user-input-form > .form-group > .form-control').click()
+       cy.get(':nth-child(1) > .nbr-form-wrap > .max').click()
+       cy.get('#btnOk').click()
+       cy.get('.yellow').click()
+       cy.get('.cart-list > a > img').click()
+       cy.get('.btn-wrap > .btn').click()
+       cy.get(':nth-child(5) > .input-group > .form-control').type("83869056900")
+       cy.get('.panel-btn-payment > .btn').click()
+       cy.get('#bank').check() //radio button dengan id: bank
+       cy.get(':nth-child(3) > .ck-right-wrap > .panel-payment-white > .btn').click()
     })
   })
   //ini untuk mengatasi error handler
