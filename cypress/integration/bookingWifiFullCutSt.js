@@ -1,4 +1,4 @@
-describe('Booking Wifi Using Credit Card (Staging)', function() {
+describe('Booking Wifi Using Bank Transfer and voucher (Staging)', function() {
     it('Visits Passpod', function() {
         Cypress.config()// ==>{defaultCommandTiemout}
         cy.visit(Cypress.env('BASE_URL'));
