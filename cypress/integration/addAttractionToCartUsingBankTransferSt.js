@@ -47,19 +47,29 @@ describe('Add Attraction To Cart Using Bank Transfer (Staging)', function() {
         cy.get('.col-lg-9 > .row > :nth-child(2)').click()
         cy.wait(1000)
         cy.get('div.dest-box div.dest-title:eq(2)').click()
+
+        cy.get('.orange-input').click()
+        cy.get('.react-datepicker__day--keyboard-selected').click()
+
+        cy.get('#btnSelect').click()
+        cy.get('.user-input-form > .form-group > .form-control').click()
+        cy.get(':nth-child(1) > .nbr-form-wrap > .max').click()
+        cy.get(':nth-child(2) > .nbr-form-wrap > .max').click()
+        cy.get('#btnOk').click()
+
         //cy.wait(10000)
-        cy.get('.col-wrap > #btnSelect:eq(1)').click()
-        cy.get('#dropdown1 > .package-box-down > .package-form-wrap > .row > :nth-child(1) > .form-group > :nth-child(3) > .react-datepicker-wrapper > .react-datepicker__input-container > .form-control').click()
+        //cy.get('.col-wrap > #btnSelect:eq(1)').click()
+        //cy.get('#dropdown1 > .package-box-down > .package-form-wrap > .row > :nth-child(1) > .form-group > :nth-child(3) > .react-datepicker-wrapper > .react-datepicker__input-container > .form-control').click()
         //for set and get today date
-        var d = new Date();
-        d.setDate(d.getDate() + 4);
-        cy.get('.react-datepicker__day:contains('+d.getDate()+'):not(.react-datepicker__day--disabled):eq(0)').click()
-        //cy.get('.react-datepicker__day--today + div + div + div').click()
-        cy.get('#dropdown1 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .form-control').click()
-        cy.get('#dropdown1 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .user-wrap > :nth-child(1) > .nbr-form-wrap > .max').click()
-        cy.get('#dropdown1 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .user-wrap > :nth-child(1) > .nbr-form-wrap > .max').click()
-        cy.get('#dropdown1 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .user-wrap > :nth-child(2) > .nbr-form-wrap > .max').click()
-        cy.get('#dropdown1 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .user-wrap > .btn-user > #btnOk').click()
+        // var d = new Date();
+        // d.setDate(d.getDate() + 4);
+        // cy.get('.react-datepicker__day:contains('+d.getDate()+'):not(.react-datepicker__day--disabled):eq(0)').click()
+        // //cy.get('.react-datepicker__day--today + div + div + div').click()
+        // cy.get('#dropdown1 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .form-control').click()
+        // cy.get('#dropdown1 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .user-wrap > :nth-child(1) > .nbr-form-wrap > .max').click()
+        // cy.get('#dropdown1 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .user-wrap > :nth-child(1) > .nbr-form-wrap > .max').click()
+        // cy.get('#dropdown1 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .user-wrap > :nth-child(2) > .nbr-form-wrap > .max').click()
+        // cy.get('#dropdown1 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .user-wrap > .btn-user > #btnOk').click()
         cy.get('.yellow').click()
 
         cy.wait(1000)

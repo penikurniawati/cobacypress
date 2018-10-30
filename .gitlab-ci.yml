@@ -105,6 +105,9 @@ addAttractionToItineraryLogin:
 AddTwoAttractionLogin:
   <<: *e2e_test_definition
 
+AddWifiExtendToCartUsingBankTranferSt:
+  <<: *e2e_test_definition
+
 addWifiToCartUsingBankTransferSt:
   <<: *e2e_test_definition
 
@@ -118,6 +121,9 @@ bookAttractionLogin:
   <<: *e2e_test_definition
 
 bookingAttractionUsingCardCreditSt:
+  <<: *e2e_test_definition
+
+bookingWifiExtendUsingCardCreditSt:
   <<: *e2e_test_definition
 
 bookingWifiFullCutSt:
