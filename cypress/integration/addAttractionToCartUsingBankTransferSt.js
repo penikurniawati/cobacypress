@@ -52,6 +52,7 @@ describe('Add Attraction To Cart Using Bank Transfer (Staging)', function() {
         cy.get('.react-datepicker__day--keyboard-selected').click()
 
         cy.get('#btnSelect').click()
+        cy.get(':nth-child(2) > .form-group > .form-control').select("19:00:00")
         cy.get('.user-input-form > .form-group > .form-control').click()
         cy.get(':nth-child(1) > .nbr-form-wrap > .max').click()
         cy.get(':nth-child(2) > .nbr-form-wrap > .max').click()
@@ -73,7 +74,7 @@ describe('Add Attraction To Cart Using Bank Transfer (Staging)', function() {
         cy.get('.yellow').click()
 
         cy.wait(1000)
-        cy.get('.btn-wrap > .btn:visible').click()
+        cy.get('.btn-wrap > .btn:visible()').click()
 
         cy.wait(1000)
         //user must login first

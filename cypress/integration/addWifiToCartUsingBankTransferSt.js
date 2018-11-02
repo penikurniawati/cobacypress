@@ -60,7 +60,7 @@ describe('Add Wifi To Cart Using Bank Transfer (Staging)', function() {
        //for set and get today date
        var d = new Date();
        d.setDate(d.getDate() + 6);
-       cy.get('.react-datepicker__day:contains('+d.getDate()+'):not(.react-datepicker__day--disabled)').click()
+       cy.get('.react-datepicker__day:contains('+d.getDate()+'):not(.react-datepicker__day--disabled):eq(0)').click()
        //cy.get('.react-datepicker__day--keyboard-selected + div + div + div').click()
        //Jumlah Qty
        cy.get('#qty').select("2")
