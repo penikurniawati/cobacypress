@@ -63,6 +63,12 @@ variables:
 activityToCart:
   <<: *e2e_test_definition
 
+addAttarctionAndWifiToCartUsingBankTransferSt:
+  <<: *e2e_test_definition
+
+addAttarctionAndWifiToCartUsingCardCreditSt:
+  <<: *e2e_test_definition
+
 activityToCartSt:
   <<: *e2e_test_definition
 
@@ -82,6 +88,12 @@ addAttractionInItineraryLoginSt:
   <<: *e2e_test_definition
 
 addAttractionToCartUsingBankTransferSt:
+  <<: *e2e_test_definition
+
+addTwoWifiToCartUsingBankTransferSt:
+  <<: *e2e_test_definition
+
+addWifiAndAttractionToCartUsingCardCreditSt:
   <<: *e2e_test_definition
   
 addAttractionRegionToCartSt:
