@@ -3,7 +3,7 @@ describe('Add Twp Wifi To Cart Using Bank Transfer (Staging)', function() {
       cy.visit(Cypress.env('BASE_URL'));
 
       //masuk ke halaman login
-      cy.get('.account-wrap > [href="/id/login"]').click()
+      cy.get('[href="id/login"]').click()
       cy.get('input[type=text]').type('peni@skyshi.io')
       cy.get('input[type=password]').type('penikurniawati')
       cy.get('form').find('button').contains('Masuk').click()
@@ -82,9 +82,9 @@ describe('Add Twp Wifi To Cart Using Bank Transfer (Staging)', function() {
        //cy.get('.react-datepicker__day--keyboard-selected + div + div + div').click()
        //Jumlah Qty
        cy.get('#qty').select("2")
-       cy.get(':nth-child(6) > .form-group > #country').select("MANDIRI")
-       cy.get(':nth-child(7) > .form-group > #acnNumber').type('1234567890')
-       cy.get(':nth-child(8) > .form-group > #acnNumber').type('Jojo')
+       cy.get(':nth-child(4) > .form-group > #country').select("MANDIRI")
+       cy.get(':nth-child(5) > .form-group > #acnNumber').type('1234567890')
+       cy.get(':nth-child(6) > .form-group > #acnNumber').type('Jojo')
        cy.get('#self').click()
        //cy.get('#selfTwo').click()
        
@@ -113,9 +113,9 @@ describe('Add Twp Wifi To Cart Using Bank Transfer (Staging)', function() {
        //cy.get('.react-datepicker__day--keyboard-selected + div + div + div').click()
        //Jumlah Qty
        cy.get('#qty').select("2")
-       cy.get(':nth-child(6) > .form-group > #country').select("MANDIRI")
-       cy.get(':nth-child(7) > .form-group > #acnNumber').type('1234567890')
-       cy.get(':nth-child(8) > .form-group > #acnNumber').type('Jojo')
+       cy.get(':nth-child(4) > .form-group > #country').select("MANDIRI")
+       cy.get(':nth-child(5) > .form-group > #acnNumber').type('1234567890')
+       cy.get(':nth-child(6) > .form-group > #acnNumber').type('Jojo')
        cy.get('#self').click()
        //cy.get('#selfTwo').click()
        
@@ -131,7 +131,7 @@ describe('Add Twp Wifi To Cart Using Bank Transfer (Staging)', function() {
        
       cy.get(':nth-child(4) > .payment-wrap > .btn').click()
        cy.wait(1000)
-       cy.get('.btn-wrap > .btn').click()
+       //cy.get('.btn-wrap > .btn').click()
     //    cy.get('.box-btn-wrap > .btn-orange').click()
 
        cy.wait(1000)
