@@ -13,7 +13,47 @@ describe('Booking Event Using Bank Transfer (Staging)', function() {
       cy.get('.col-md-4 > .btn').click()
       cy.get('.btn-plus').click()
       cy.get('.col-lg-3 > .btn').click()
+
+      //booking detail
+      cy.get(':nth-child(2) > :nth-child(3) > .input-group > .form-control').type("83869056900")
+      cy.get(':nth-child(3) > .col-sm-4 > .input-group > .form-control').type("314asd")
+      cy.get('.panel-btn-payment > .btn').click()
+
+      //payment page
+      cy.wait(1000)
+      cy.get('#bank').check() //radio button dengan id: bank
+      cy.get(':nth-child(3) > .ck-right-wrap > .panel-payment-white > .btn').click()
       
+      //ke booking detail
+      cy.get('.btn-wrap > div > .btn').click()
+    })
+  })
+
+  describe('Booking Event Using Bank Transfer Before Login (Staging)', function() {
+    it('Visits Passpod', function() {
+      cy.visit(Cypress.env('BASE_URL'));
+  
+      cy.get('div.slick-active div.dest-type:eq(1) > span').click()
+      cy.get('.col-md-4 > .btn').click()
+      cy.get('.btn-plus').click()
+      cy.get('.col-lg-3 > .btn').click()
+
+      cy.get('input[type=text]').type('peni@skyshi.io')
+      cy.get('input[type=password]').type('penikurniawati')
+      cy.get('form').find('button').contains('Masuk').click()
+
+      //booking detail
+      cy.get(':nth-child(2) > :nth-child(3) > .input-group > .form-control').type("83869056900")
+      cy.get(':nth-child(3) > .col-sm-4 > .input-group > .form-control').type("314asd")
+      cy.get('.panel-btn-payment > .btn').click()
+
+      //payment page
+      cy.wait(1000)
+      cy.get('#bank').check() //radio button dengan id: bank
+      cy.get(':nth-child(3) > .ck-right-wrap > .panel-payment-white > .btn').click()
+
+      //ke booking detail
+      cy.get('.btn-wrap > div > .btn').click()
     })
   })
   //ini untuk mengatasi error handler
