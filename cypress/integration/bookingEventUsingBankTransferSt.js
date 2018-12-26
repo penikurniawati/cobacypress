@@ -11,7 +11,11 @@ describe('Booking Event Using Bank Transfer (Staging)', function() {
       //selesai login
       cy.get('div.slick-active div.dest-type:eq(1) > span').click()
       cy.get('.col-md-4 > .btn').click()
-      cy.get('.btn-plus').click()
+      var i = 1;
+      while(i<=2){
+        cy.get('.btn-plus').click()
+        i++;
+      }
       cy.get('.col-lg-3 > .btn').click()
 
       //booking detail
@@ -35,7 +39,11 @@ describe('Booking Event Using Bank Transfer (Staging)', function() {
   
       cy.get('div.slick-active div.dest-type:eq(1) > span').click()
       cy.get('.col-md-4 > .btn').click()
-      cy.get('.btn-plus').click()
+      var i = 1;
+      while(i<2){
+        cy.get('.btn-plus').click()
+        i++;
+      }
       cy.get('.col-lg-3 > .btn').click()
 
       cy.get('input[type=text]').type('peni@skyshi.io')

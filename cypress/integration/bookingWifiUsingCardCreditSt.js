@@ -4,7 +4,7 @@ describe('Booking Wifi Using Credit Card (Staging)', function() {
         cy.visit(Cypress.env('BASE_URL'));
 
       //masuk ke halaman login
-      cy.get('.account-wrap > [href="/id/login"]').click()
+      cy.get('[href="id/login"]').click()
       cy.get('input[type=text]').type('peni@skyshi.io')
       cy.get('input[type=password]').type('penikurniawati')
       cy.get('form').find('button').contains('Masuk').click()
