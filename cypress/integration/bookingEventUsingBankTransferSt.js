@@ -19,8 +19,10 @@ describe('Booking Event Using Bank Transfer (Staging)', function() {
       cy.get('.col-lg-3 > .btn').click()
 
       //booking detail
-      cy.get(':nth-child(2) > :nth-child(3) > .input-group > .form-control').type("83869056900")
+      cy.get(':nth-child(2) > :nth-child(3) > .input-group > .form-control:eq(0)').type("83869056900")
       cy.get(':nth-child(3) > .col-sm-4 > .input-group > .form-control').type("314asd")
+      cy.get(":nth-child(1) > .row > :nth-child(1) > .input-group > .form-control").select("12")
+      cy.get(':nth-child(2) > :nth-child(3) > .input-group > .form-control:eq(1)').select("1990")
       cy.get('.panel-btn-payment > .btn').click()
 
       //payment page
@@ -51,8 +53,10 @@ describe('Booking Event Using Bank Transfer (Staging)', function() {
       cy.get('form').find('button').contains('Masuk').click()
 
       //booking detail
-      cy.get(':nth-child(2) > :nth-child(3) > .input-group > .form-control').type("83869056900")
+      cy.get(':nth-child(2) > :nth-child(3) > .input-group > .form-control:eq(0)').type("83869056900")
       cy.get(':nth-child(3) > .col-sm-4 > .input-group > .form-control').type("314asd")
+      cy.get(":nth-child(1) > .row > :nth-child(1) > .input-group > .form-control").select("12")
+      cy.get(':nth-child(2) > :nth-child(3) > .input-group > .form-control:eq(1)').select("1990")
       cy.get('.panel-btn-payment > .btn').click()
 
       //payment page
