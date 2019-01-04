@@ -131,7 +131,7 @@ describe('Add Twp Wifi To Cart Using Bank Transfer (Staging)', function() {
        
       cy.get(':nth-child(4) > .payment-wrap > .btn').click()
        cy.wait(1000)
-       //cy.get('.btn-wrap > .btn').click()
+       cy.get('.btn-wrap > .btn').click()
     //    cy.get('.box-btn-wrap > .btn-orange').click()
 
        cy.wait(1000)

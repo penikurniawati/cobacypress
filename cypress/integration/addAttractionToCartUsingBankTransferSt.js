@@ -18,7 +18,7 @@ describe('Add Attraction To Cart Using Bank Transfer (Staging)', function() {
       d.setDate(d.getDate() + 3);
       cy.get('.react-datepicker__day:contains('+d.getDate()+'):not(.react-datepicker__day--disabled):eq(0)').click()
       cy.get(':nth-child(1) > .package-box-top > .row > .col-lg-5 > .col-wrap > #btnSelect').click()
-      cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(2) > .form-group > .form-control').select("19:00:00")
+      cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(2) > .form-group > .form-control').select("09:00:00")
       cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .form-control').click()
       var i = 1;
       while(i<3){
@@ -46,7 +46,8 @@ describe('Add Attraction To Cart Using Bank Transfer (Staging)', function() {
         cy.visit(Cypress.env('BASE_URL'));
 
         cy.wait(1000)
-        cy.get('.slick-current > :nth-child(1) > #topBox > a > :nth-child(1) > .destination-box > img').click()
+        cy.get('div#topBox.col-lg-3.col-12:eq(0)').click()
+        cy.wait(1000)
         cy.get('.col-lg-9 > .row > :nth-child(2)').click()
         cy.wait(3000)
         cy.get('div.dest-box div.dest-title:eq(1)').click()
@@ -55,7 +56,7 @@ describe('Add Attraction To Cart Using Bank Transfer (Staging)', function() {
         cy.get('.react-datepicker__day--keyboard-selected').click()
 
         cy.get('#btnSelect').click()
-        // cy.get(':nth-child(2) > .form-group > .form-control').select("19:00:00")
+        cy.get(':nth-child(2) > .form-group > .form-control').select("19:00:00")
         cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .form-control').click()
         cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .user-wrap > :nth-child(1) > .nbr-form-wrap > .max').click()
         cy.get('#btnOk').click()

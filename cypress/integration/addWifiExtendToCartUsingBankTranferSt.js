@@ -34,7 +34,6 @@ describe('Add Wifi Extend to Cart Using Bank Transfer (Staging)', function() {
     it('Visits Passpod', function() {
       cy.visit(Cypress.env('BASE_URL'));
     
-      //selesai login
       cy.get('.btn-index-wrap > div > .btn:eq(0)').click()
       cy.get('.wf-btn-wrap > div > .btn').click()
       cy.get('.input-group-append > .form-control').type("UR218512")
@@ -45,6 +44,7 @@ describe('Add Wifi Extend to Cart Using Bank Transfer (Staging)', function() {
       d.setDate(d.getDate() + 2);
       cy.get('.react-datepicker__day:contains('+d.getDate()+'):not(.react-datepicker__day--disabled):eq(0)').click()
       cy.get(':nth-child(1) > .payment-wrap > .btn').click()
+      cy.get('.btn-wrap > .btn').click()
       cy.wait(3000)
       //masuk ke halaman login
       cy.get('input[type=text]').type('peni@skyshi.io')
@@ -52,7 +52,7 @@ describe('Add Wifi Extend to Cart Using Bank Transfer (Staging)', function() {
       cy.get('form').find('button').contains('Masuk').click()
 
       cy.wait(1000)
-      cy.get('.btn-wrap > .btn:visible()').click()
+      // cy.get('.btn-wrap > .btn:visible()').click()
       cy.get(':nth-child(5) > .input-group > .form-control').type("83643771553")
       cy.get('.panel-btn-payment > .btn').click()
       cy.wait(3000)

@@ -14,7 +14,7 @@ describe('Booking Attraction Using Card Credit (Staging)', function() {
       cy.get('div.date-choose-wrap:contains("kedatangan") input').click()
       cy.get('.react-datepicker__day--today + div').click()
       cy.get(':nth-child(1) > .package-box-top > .row > .col-lg-5 > .col-wrap > #btnSelect').click()
-      cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(2) > .form-group > .form-control').select("19:00:00")
+      cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(2) > .form-group > .form-control').select("09:00:00")
       cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .form-control').click()
       cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .user-wrap > :nth-child(1) > .nbr-form-wrap > .max').click()
       cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .user-wrap > :nth-child(1) > .nbr-form-wrap > .max').click()
@@ -45,7 +45,7 @@ describe('Booking Attraction Using Card Credit (Staging)', function() {
       cy.get('div.date-choose-wrap:contains("kedatangan") input').click()
       cy.get('.react-datepicker__day--today + div').click()
       cy.get(':nth-child(1) > .package-box-top > .row > .col-lg-5 > .col-wrap > #btnSelect').click()
-      cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(2) > .form-group > .form-control').select("19:00:00")
+      cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(2) > .form-group > .form-control').select("09:00:00")
       cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .form-control').click()
       cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .user-wrap > :nth-child(1) > .nbr-form-wrap > .max').click()
       cy.get('#dropdown0 > .package-box-down > .package-form-wrap > .row > :nth-child(3) > .user-input-form > .form-group > .user-wrap > :nth-child(1) > .nbr-form-wrap > .max').click()
@@ -66,18 +66,6 @@ describe('Booking Attraction Using Card Credit (Staging)', function() {
       cy.get(':nth-child(3) > .input-group > .form-control').type("123")
 
       cy.get(':nth-child(3) > .ck-right-wrap > .panel-payment-white > .btn').click()
-      // cy.get('.yellow').click()
-
-      // cy.get('form').find('button').contains('BAYAR SEKARANG').click()
-      //cy.get('.btn-wrap > .orange').click()
-      // cy.get('button').click()          // Click on button
-      // cy.focused().click()              // Click on el with focus
-      // cy.contains('BAYAR').click()
-
-      // cy.get('.panel-btn-payment > .btn').click()
-
-      // cy.get('#bank').check() //radio button dengan id: bank
-      // cy.get(':nth-child(3) > .ck-right-wrap > .panel-payment-white > .btn').click()
     })
   })
 

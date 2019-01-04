@@ -3,13 +3,13 @@ describe('Booking Wifi Extend Using Card Credit (Staging)', function() {
       cy.visit(Cypress.env('BASE_URL'));
 
       //masuk ke halaman login
-      cy.get('.account-wrap > [href="/id/login"]').click()
+      cy.get('.account-wrap > [href="id/login"]').click()
       cy.get('input[type=text]').type('peni@skyshi.io')
       cy.get('input[type=password]').type('penikurniawati')
       cy.get('form').find('button').contains('Masuk').click()
         
       //selesai login
-      cy.get('.btn-index-wrap > div > .btn').click()
+      cy.get('.btn-index-wrap > div > .btn:eq(0)').click()
       cy.get('.wf-btn-wrap > div > .btn').click()
       cy.get('.input-group-append > .form-control').type("UR218512")
       cy.get('.form-group > .input-group-append > .btn').click()
@@ -36,7 +36,7 @@ describe('Booking Wifi Extend Using Card Credit (Staging)', function() {
     it('Visits Passpod', function() {
       cy.visit(Cypress.env('BASE_URL'));
     
-      cy.get('.btn-index-wrap > div > .btn').click()
+      cy.get('.btn-index-wrap > div > .btn:eq(0)').click()
       cy.get('.wf-btn-wrap > div > .btn').click()
       cy.get('.input-group-append > .form-control').type("UR218512")
       cy.get('.form-group > .input-group-append > .btn').click()
