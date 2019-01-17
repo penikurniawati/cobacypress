@@ -106,7 +106,7 @@ describe('Booking Wifi With Insurance Using Bank Credit (Staging)', function() {
         cy.visit(Cypress.env('BASE_URL'));
 
     //User direct to login page because user not login
-    cy.get('#dropdownProfile').click()
+    cy.get('#[href="id/login"]').click()
     cy.get('form').within(() =>{
         cy.get('input[type=text]').type('pietro.ryanditha@skyshi.io')
         
