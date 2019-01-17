@@ -25,7 +25,7 @@ describe('Booking Insurance Using Bank Transfer (Staging)', function() {
       cy.get(':nth-child(6) > :nth-child(1) > .input-group > .form-control').type('War')
       cy.get(':nth-child(6) > :nth-child(2) > .input-group > .form-control').select("Adik")
       cy.get('.checkbox > input').click()
-      cy.get(':nth-child(4) > .btn').click()
+      cy.get(':nth-child(4) > :nth-child(2) > .btn').click()
       cy.get(':nth-child(5) > .input-group > .form-control').type("083869056900")
       cy.get('.panel-btn-payment > .btn').click()
       //pembayaran Bank transfer
@@ -57,7 +57,7 @@ describe('Booking Insurance Using Bank Transfer (Staging)', function() {
       cy.get(':nth-child(6) > :nth-child(1) > .input-group > .form-control').type('War')
       cy.get(':nth-child(6) > :nth-child(2) > .input-group > .form-control').select("Adik")
       cy.get('.checkbox > input').click()
-      cy.get(':nth-child(4) > .btn').click()
+      cy.get(':nth-child(4) > :nth-child(2) > .btn').click()
       cy.wait(3000)
 
       //masuk ke halaman login
