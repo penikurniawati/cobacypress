@@ -45,7 +45,7 @@ describe('Add To Cart Insurance Using Bank Transfer (Staging)', function() {
       cy.get(':nth-child(1) > .row > :nth-child(1) > .radio-btn > input').click()
       cy.get(':nth-child(2) > .row > :nth-child(1) > .radio-btn > input').click()
       cy.get(':nth-child(3) > :nth-child(2) > .btn').click()
-      //cy.get('.action > .btn').click()
+      cy.get('.action > .btn').click()
       cy.get('.panel-body > :nth-child(1) > :nth-child(1) > .input-group > .form-control').type("Peni")
       cy.get(':nth-child(1) > :nth-child(2) > .input-group > .form-control').type("Test")
       cy.get('.form-group > .input-group > .form-control').type("Gamping, Yogyakarta")
