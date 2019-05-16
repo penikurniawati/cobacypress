@@ -224,3 +224,6 @@ bookingProductUsingBankTransferSt:
 
 bookingWifiUsingBankTransferSt:
   <<: *e2e_test_definition
+
+bookingAtractionUsingBankTransferSt:
+  <<: *e2e_test_definition
