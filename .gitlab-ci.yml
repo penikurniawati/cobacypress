@@ -218,3 +218,9 @@ bookingEventWithInsuranceUsingCardCreditSt:
 
 bookingWifiWithInsuranceUsingBankTransfer:
   <<: *e2e_test_definition
+
+bookingProductUsingBankTransferSt:
+  <<: *e2e_test_definition
+
+bookingWifiUsingBankTransferSt:
+  <<: *e2e_test_definition
