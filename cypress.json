@@ -3,6 +3,7 @@
     "env": {
     "BASE_URL": "https://web.passpod.project.skyshi.io/",
     "BASE_URL_TRAVY": "https://travy.passpod.project.skyshi.io/",
+    "BASE_URL_PH": "http://web.ph.passpod.project.skyshi.io",
     "defaultCommandTimeout":4000,
     "execTimeout":60000,
     "taskTimeout":60000,
