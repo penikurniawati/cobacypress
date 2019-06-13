@@ -227,3 +227,21 @@ bookingWifiUsingBankTransferSt:
 
 bookingAtractionUsingBankTransferSt:
   <<: *e2e_test_definition
+
+addAtractionToCartUsingBankTransferPHSt:
+  <<: *e2e_test_definition
+
+addProductToCartByCodPHSt:
+  <<: *e2e_test_definition
+
+addWifiToCartByCodPHSt:
+  <<: *e2e_test_definition
+
+bookingAtractionUsingBankTransferPHSt:
+  <<: *e2e_test_definition
+
+bookingProductUsingBankTransferPHSt:
+  <<: *e2e_test_definition
+
+bookingWifiUsingBankTransferPHSt:
+  <<: *e2e_test_definition
