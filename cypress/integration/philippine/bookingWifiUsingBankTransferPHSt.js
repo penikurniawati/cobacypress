@@ -19,7 +19,7 @@ describe('Booking Wifi Using Bank Transfer PH (Staging)', function() {
       d.setDate(d.getDate() + 4);
       cy.get('.react-datepicker__day:contains('+d.getDate()+'):not(.react-datepicker__day--disabled):eq(0)').click()
       cy.get('#qty').select("2")
-      cy.get('div.form-group:contains("Choose your Bank") select'). select("BCA")
+      cy.get('div.form-group:contains("Choose your Bank") select'). select("Citibank, N.A.")
       cy.get('div.form-group:contains("Account Number") input'). type("1234567")
       //pengambilan oleh kurir
       cy.get('#courier').click()
@@ -38,6 +38,7 @@ describe('Booking Wifi Using Bank Transfer PH (Staging)', function() {
       //pilih bank transfer
       cy.get('#bank').check() //radio button dengan id: bank
       cy.get(':nth-child(3) > .ck-right-wrap > .panel-payment-white > .btn').click()
+      cy.get('.btn-wrap > div > .btn').click()
     })
   })
 
@@ -54,7 +55,7 @@ describe('Booking Wifi Using Bank Transfer PH (Staging)', function() {
       d.setDate(d.getDate() + 4);
       cy.get('.react-datepicker__day:contains('+d.getDate()+'):not(.react-datepicker__day--disabled):eq(0)').click()
       cy.get('#qty').select("2")
-      cy.get('div.form-group:contains("Choose your Bank") select'). select("BCA")
+      cy.get('div.form-group:contains("Choose your Bank") select'). select("Citibank, N.A.")
       cy.get('div.form-group:contains("Account Number") input'). type("1234567")
       cy.get('div.form-group:contains("Account Name") input'). type("Testing PH")
       //pengambilan oleh kurir
@@ -82,6 +83,7 @@ describe('Booking Wifi Using Bank Transfer PH (Staging)', function() {
       //pilih bank transfer
       cy.get('#bank').check() //radio button dengan id: bank
       cy.get(':nth-child(3) > .ck-right-wrap > .panel-payment-white > .btn').click()
+      cy.get('.btn-wrap > div > .btn').click()
     })
   })
 

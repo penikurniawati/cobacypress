@@ -4,12 +4,12 @@ describe('Booking Product Using Bank Transfer PH (Staging)', function() {
 
         //masuk ke halaman login
       cy.get('[href="en/login"').click()
-      cy.get('input[type=text]').type('peni@skyshi.io')
-      cy.get('input[type=password]').type('penikurniawati')
+      cy.get('input[type=text]').type('testingqaph@gmail.com')
+      cy.get('input[type=password]').type('testingph12345')
       cy.get('form').find('button').contains('Login').click()
         
       //selesai login
-      cy.wait(1000)
+      cy.wait(3000)
       cy.get('div.slick-active div.dest-box.shop:eq(0)').click()
       var i = 1;
       while(i<2){
@@ -30,6 +30,7 @@ describe('Booking Product Using Bank Transfer PH (Staging)', function() {
       //pilih bank transfer
       cy.get('#bank').check() //radio button dengan id: bank
       cy.get(':nth-child(3) > .ck-right-wrap > .panel-payment-white > .btn').click()
+      cy.get('.btn-wrap > div > .btn').click()
     })
   })
 
@@ -37,6 +38,7 @@ describe('Booking Product Using Bank Transfer PH (Staging)', function() {
     it('Visits Passpod', function() {
       cy.visit(Cypress.env('BASE_URL_PH'));
 
+      cy.wait(2000)
       cy.get('div.slick-active div.dest-box.shop:eq(0)').click()
       var i = 1;
       while(i<2){
@@ -47,8 +49,8 @@ describe('Booking Product Using Bank Transfer PH (Staging)', function() {
       cy.get('.row > :nth-child(2) > .btn').click()
 
       //masuk ke halaman login
-      cy.get('input[type=text]').type('peni@skyshi.io')
-      cy.get('input[type=password]').type('penikurniawati')
+      cy.get('input[type=text]').type('testingqaph@gmail.com')
+      cy.get('input[type=password]').type('testingph12345')
       cy.get('form').find('button').contains('Login').click()
         
       //selesai login
@@ -65,6 +67,7 @@ describe('Booking Product Using Bank Transfer PH (Staging)', function() {
       //pilih bank transfer
       cy.get('#bank').check() //radio button dengan id: bank
       cy.get(':nth-child(3) > .ck-right-wrap > .panel-payment-white > .btn').click()
+      cy.get('.btn-wrap > div > .btn').click()
     })
   })
   
